@@ -1,30 +1,21 @@
 //
-//  Person2ViewController.swift
-//  AllenShit
+//  popUpViewController.swift
+//  Matching
 //
-//  Created by Kim Yeon Jeong on 2020/2/20.
+//  Created by Kim Yeon Jeong on 2020/2/22.
 //  Copyright © 2020 Kim Yeon Jeong. All rights reserved.
 //
 
 import UIKit
 
-class Person2ViewController: UIViewController {
+class popUpViewController: UIViewController {
 
-
-    @IBAction func popUpPressed(_ sender: Any) {
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        // Do any additional setup after loading the view.
-        
 
-    
+        // Do any additional setup after loading the view.
     }
     
-
 
     /*
     // MARK: - Navigation
@@ -35,8 +26,5 @@ class Person2ViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func goBackToOneButtonTapped(_ sender: Any) {     performSegue(withIdentifier: "unwindSegueToResult", sender: self)}
 
-    
-    
 }
