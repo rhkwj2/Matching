@@ -229,13 +229,21 @@
                         <viewLayoutGuide key="safeArea" id="hdj-RF-jPP"/>
                     </view>
                     <navigationItem key="navigationItem" id="d0m-YZ-IFh" customClass="p">
-                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="Z7h-lc-waO">
-                            <connections>
-                                <action selector="popUpPressed:" destination="k3S-As-4dV" id="s58-d7-QqU"/>
-                            </connections>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="vdo-vc-v9x">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S8O-f9-sZf">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="kET-U9-30p" kind="popoverPresentation" identifier="informationPopupSegueIdentifier" popoverAnchorView="S8O-f9-sZf" id="8va-j4-lrE">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="button" destination="S8O-f9-sZf" id="hQn-gL-1Lq"/>
                         <segue destination="Eww-YF-kTg" kind="unwind" identifier="unwindSegueToResult" unwindAction="unwindToVC1WithSegue:" id="1U6-H1-HBb"/>
                     </connections>
                 </viewController>
@@ -247,14 +255,13 @@
         <!--Pop Up View Controller-->
         <scene sceneID="LsI-dU-oRQ">
             <objects>
-                <viewController id="kET-U9-30p" customClass="popUpViewController" customModule="Matching" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kET-U9-30p" customClass="PopUpViewController" customModule="Matching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HpZ-uy-ZNF">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJZ-Nn-t6R">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJZ-Nn-t6R">
                                 <rect key="frame" x="5" y="11" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfV-rS-ZIn">
                                         <rect key="frame" x="95" y="91" width="52" height="32"/>
@@ -271,16 +278,28 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="38D-2c-zij"/>
+                                    <constraint firstAttribute="width" constant="240" id="Gi9-3g-WoN"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fJZ-Nn-t6R" firstAttribute="centerX" secondItem="HpZ-uy-ZNF" secondAttribute="centerX" id="7Eo-ph-Nfr"/>
+                            <constraint firstItem="fJZ-Nn-t6R" firstAttribute="centerY" secondItem="HpZ-uy-ZNF" secondAttribute="centerY" id="Dca-Zt-rag"/>
+                            <constraint firstItem="yOX-0l-iU4" firstAttribute="bottom" secondItem="fJZ-Nn-t6R" secondAttribute="bottom" constant="11" id="HPx-2I-5YI"/>
+                            <constraint firstItem="fJZ-Nn-t6R" firstAttribute="leading" secondItem="yOX-0l-iU4" secondAttribute="leading" constant="5" id="jSF-xC-De6"/>
+                            <constraint firstItem="yOX-0l-iU4" firstAttribute="trailing" secondItem="fJZ-Nn-t6R" secondAttribute="trailing" constant="5" id="k1H-j9-dz7"/>
+                            <constraint firstItem="fJZ-Nn-t6R" firstAttribute="leading" secondItem="yOX-0l-iU4" secondAttribute="leading" constant="5" id="vQj-5b-Tj0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yOX-0l-iU4"/>
                     </view>
                     <size key="freeformSize" width="250" height="150"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NjB-gM-ZOh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3256.8000000000002" y="127.28635682158921"/>
+            <point key="canvasLocation" x="3142" y="118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4gJ-Tm-bP2">
@@ -303,6 +322,5 @@
     </scenes>
     <resources>
         <image name="MAtchinggifts" width="761" height="315"/>
-        <image name="info.circle" catalog="system" width="64" height="60"/>
     </resources>
 </document>

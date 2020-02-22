@@ -15,7 +15,7 @@
 		92A8F5FD23FE9F9D00CD122F /* Person1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8F5FB23FE9F9D00CD122F /* Person1ViewController.swift */; };
 		92A8F5FF23FE9FB400CD122F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A8F5FE23FE9FB300CD122F /* Main.storyboard */; };
 		92A8F60123FE9FE700CD122F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8F60023FE9FE700CD122F /* ViewController.swift */; };
-		92A8F6032401043300CD122F /* popUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8F6022401043300CD122F /* popUpViewController.swift */; };
+		92A8F6032401043300CD122F /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8F6022401043300CD122F /* PopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		92A8F5FB23FE9F9D00CD122F /* Person1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person1ViewController.swift; sourceTree = "<group>"; };
 		92A8F5FE23FE9FB300CD122F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		92A8F60023FE9FE700CD122F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../AllenShit/AllenShit/ViewController.swift; sourceTree = "<group>"; };
-		92A8F6022401043300CD122F /* popUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popUpViewController.swift; sourceTree = "<group>"; };
+		92A8F6022401043300CD122F /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 				92A8F60023FE9FE700CD122F /* ViewController.swift */,
 				92A8F5FB23FE9F9D00CD122F /* Person1ViewController.swift */,
 				92A8F5FA23FE9F9C00CD122F /* Person2ViewController.swift */,
-				92A8F6022401043300CD122F /* popUpViewController.swift */,
+				92A8F6022401043300CD122F /* PopUpViewController.swift */,
 				92A8F5EF23FE9F5F00CD122F /* Assets.xcassets */,
 				92A8F5F123FE9F5F00CD122F /* LaunchScreen.storyboard */,
 				92A8F5F423FE9F5F00CD122F /* Info.plist */,
@@ -150,7 +150,7 @@
 				92A8F60123FE9FE700CD122F /* ViewController.swift in Sources */,
 				92A8F5FD23FE9F9D00CD122F /* Person1ViewController.swift in Sources */,
 				92A8F5E723FE9F5500CD122F /* AppDelegate.swift in Sources */,
-				92A8F6032401043300CD122F /* popUpViewController.swift in Sources */,
+				92A8F6032401043300CD122F /* PopUpViewController.swift in Sources */,
 				92A8F5FC23FE9F9D00CD122F /* Person2ViewController.swift in Sources */,
 				92A8F5E923FE9F5500CD122F /* SceneDelegate.swift in Sources */,
 			);

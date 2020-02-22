@@ -8,11 +8,48 @@
 
 import UIKit
 
-class Person2ViewController: UIViewController {
-
-
+class Person2ViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+//    @IBOutlet weak var barButtonItem: UIBarButtonItem!
+    @IBOutlet weak var button: UIButton!
+    
     @IBAction func popUpPressed(_ sender: Any) {
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "informationPopupSegueIdentifier" {
+            let popUpViewController: PopUpViewController = segue.destination as! PopUpViewController
+            popUpViewController.popoverPresentationController?.backgroundColor = UIColor.darkGray
+            popUpViewController.popoverPresentationController!.delegate = self
+            
+            let presentationViewController = popUpViewController.popoverPresentationController
+            presentationViewController?.permittedArrowDirections = .any
+            presentationViewController?.delegate = self
+            presentationViewController?.sourceView = button
+            presentationViewController?.sourceRect = button.bounds
+        }
+    }
+    
+    func adaptivePresentationStyle(for controller:
+        UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.none
+    }
+    
+    func presentationController(_ controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
+        return UINavigationController(rootViewController: controller.presentedViewController)
+    }
+    
+    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
+        
+        print("Controller did dismiss popover.")
+    }
+    
+    func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
+        
+        print("Controller should dismiss popover.")
+        
+        return true
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
