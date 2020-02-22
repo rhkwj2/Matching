@@ -10,30 +10,35 @@
         <!--Matching-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AllenShit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Matching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yf7-vf-Z9f">
-                                <rect key="frame" x="38" y="405" width="299" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When you want to start, press the start button" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yf7-vf-Z9f">
+                                <rect key="frame" x="50" y="398.5" width="275" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIZ-Ph-Xn1">
-                                <rect key="frame" x="124" y="561" width="126" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIZ-Ph-Xn1">
+                                <rect key="frame" x="124.5" y="561" width="126" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="5bG-jF-8RZ"/>
+                                    <constraint firstAttribute="width" constant="126" id="imZ-zy-8La"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <segue destination="ImF-Af-JpL" kind="show" id="NgN-LJ-Oxu"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="MAtchinggifts" translatesAutoresizingMaskIntoConstraints="NO" id="uGt-sl-j4q">
-                                <rect key="frame" x="-69" y="177" width="499" height="199"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="MAtchinggifts" translatesAutoresizingMaskIntoConstraints="NO" id="uGt-sl-j4q">
+                                <rect key="frame" x="-193" y="168.5" width="761" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Tfi-MQ-LKp"/>
+                                    <constraint firstAttribute="width" secondItem="uGt-sl-j4q" secondAttribute="height" multiplier="761:200" id="cRr-Mu-7iK"/>
+                                </constraints>
                             </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N67-ep-M4B">
                                 <rect key="frame" x="133" y="259" width="85" height="35"/>
@@ -42,15 +47,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbn-0a-lxW">
-                                <rect key="frame" x="72" y="129" width="124" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbn-0a-lxW">
+                                <rect key="frame" x="72" y="129" width="114" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uGt-sl-j4q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Kv-Vj-AvQ"/>
+                            <constraint firstItem="uGt-sl-j4q" firstAttribute="top" secondItem="mbn-0a-lxW" secondAttribute="bottom" constant="8" id="7w2-Nu-jcq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OIZ-Ph-Xn1" secondAttribute="bottom" constant="20" id="Pr8-4J-zVT"/>
+                            <constraint firstItem="OIZ-Ph-Xn1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TZ6-25-Sup"/>
+                            <constraint firstItem="mbn-0a-lxW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="VJG-bx-aZn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yf7-vf-Z9f" secondAttribute="trailing" constant="50" id="W2M-Mx-Dz4"/>
+                            <constraint firstItem="yf7-vf-Z9f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ecj-N4-akj"/>
+                            <constraint firstItem="yf7-vf-Z9f" firstAttribute="top" secondItem="uGt-sl-j4q" secondAttribute="bottom" constant="30" id="fk4-KF-DnV"/>
+                            <constraint firstItem="yf7-vf-Z9f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="hrQ-8M-C9K"/>
+                            <constraint firstItem="mbn-0a-lxW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="o2J-iw-kll"/>
+                            <constraint firstItem="OIZ-Ph-Xn1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x0L-4i-GMS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Matching" id="43I-Py-16V"/>
@@ -67,7 +84,7 @@
         <!--Person1 View Controller-->
         <scene sceneID="7J5-EL-C9c">
             <objects>
-                <viewController id="ImF-Af-JpL" customClass="Person1ViewController" customModule="AllenShit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ImF-Af-JpL" customClass="Person1ViewController" customModule="Matching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pFT-3p-EDc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,9 +149,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="PRF-Ge-wKJ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7XB-V4-ewC">
-                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="DB3-MR-BDS"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="7XB-V4-ewC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qYS-Z3-Ag2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -143,7 +158,7 @@
         <!--Person2 View Controller-->
         <scene sceneID="LrU-DO-YC2">
             <objects>
-                <viewController id="k3S-As-4dV" customClass="Person2ViewController" customModule="AllenShit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="k3S-As-4dV" customClass="Person2ViewController" customModule="Matching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tr5-QE-gnQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
